@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bibliotecation.Business\Bibliotecario.Business.csproj" />
+  </ItemGroup>
+
 </Project>

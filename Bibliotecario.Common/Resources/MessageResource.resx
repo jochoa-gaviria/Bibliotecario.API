@@ -120,6 +120,21 @@
   <data name="BadRequestMessage" xml:space="preserve">
     <value>Modelo Inválido - Errores en el Request</value>
   </data>
+  <data name="ErrorInvalidUserType" xml:space="preserve">
+    <value>El tipo de usuario es inválido</value>
+  </data>
+  <data name="ErrorNotFoundLoan" xml:space="preserve">
+    <value>El prestamo con id {0} no existe</value>
+  </data>
+  <data name="ErrorUserAlreadyHasLeading" xml:space="preserve">
+    <value>El usuario con identificacion {0} ya tiene un libro prestado por lo cual no se le puede realizar otro prestamo</value>
+  </data>
+  <data name="ErrorUserNotFound" xml:space="preserve">
+    <value>El usuario con id {0} no existe</value>
+  </data>
+  <data name="InternalServerError" xml:space="preserve">
+    <value>Ha ocurrido un error, por favor intente nuevamente</value>
+  </data>
   <data name="SuccessMessage" xml:space="preserve">
     <value>Operación existosa.</value>
   </data>

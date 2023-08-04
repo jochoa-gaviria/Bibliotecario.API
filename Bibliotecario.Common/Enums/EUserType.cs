@@ -2,7 +2,7 @@
 
 public enum EUserType
 {
-    Member = 1,
-    Employee = 2,
-    Guest = 3
+    AFILIADO = 1,
+    EMPLEADO = 2,
+    INVITADO = 3
 }

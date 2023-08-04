@@ -1,4 +1,6 @@
-﻿using Bibliotecario.DataAccess.Contracts.Interfaces;
+﻿using Bibliotecario.Application.Contracts.Interfaces;
+using Bibliotecario.Application.Services;
+using Bibliotecario.DataAccess.Contracts.Interfaces;
 using Bibliotecario.DataAccess.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -22,12 +24,14 @@ public static class Register
 
     private static IServiceCollection AddServices(this IServiceCollection services)
     {
+        services.AddTransient<ILoanService, LoanService>();
+        services.AddTransient<IUserService, UserService>();
         return services;
     }
 
     private static IServiceCollection AddRepositories(this IServiceCollection services)
     {
-        services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         return services;
     }
 

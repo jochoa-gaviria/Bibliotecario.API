@@ -1,11 +1,15 @@
 ﻿using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace Bibliotecario.Common.Models;
 
 public class ErrorDto
 {
     #region properties
+    [JsonPropertyName("codigo")]
     public string Code { get; set; }
+
+    [JsonPropertyName("mensaje")]
     public string Message { get; set; }
 
     [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]

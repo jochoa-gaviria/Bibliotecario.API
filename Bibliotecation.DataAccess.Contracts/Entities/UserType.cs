@@ -8,10 +8,7 @@ namespace Bibliotecario.DataAccess.Contracts.Entities;
 public class UserType
 {
     #region properties
-    [Key, Column("GUID")]
-    public Guid Id { get; set; }
-
-    [Column("TYPE")]
+    [Key, Column("TYPE")]
     public EUserType Type { get; set; }
 
     [Column("DESCRIPTION")]

@@ -37,7 +37,6 @@ public class PersistenceContext : DbContext
         modelBuilder.Entity<User>().Property(p => p.Id).ValueGeneratedOnAdd();
         modelBuilder.Entity<LoanUser>().Property(p => p.Id).ValueGeneratedOnAdd();
 
-        modelBuilder.Entity<UserType>().Property(p => p.Id).ValueGeneratedOnAdd();
         modelBuilder.Entity<UserType>().HasData(GenerateUserTypeData());
 
         base.OnModelCreating(modelBuilder);
@@ -50,18 +49,18 @@ public class PersistenceContext : DbContext
         {
             new UserType
             {
-                Type = EUserType.Member,
-                Description = UserTypeConstants.UserTypeDescription[EUserType.Member]
+                Type = EUserType.AFILIADO,
+                Description = UserTypeConstants.UserTypeDescription[EUserType.AFILIADO]
             },
             new UserType
             {
-                Type = EUserType.Employee,
-                Description = UserTypeConstants.UserTypeDescription[EUserType.Employee]
+                Type = EUserType.EMPLEADO,
+                Description = UserTypeConstants.UserTypeDescription[EUserType.EMPLEADO]
             },
             new UserType
             {
-                Type = EUserType.Guest,
-                Description = UserTypeConstants.UserTypeDescription[EUserType.Guest]
+                Type = EUserType.INVITADO,
+                Description = UserTypeConstants.UserTypeDescription[EUserType.INVITADO]
             }
         };
     }

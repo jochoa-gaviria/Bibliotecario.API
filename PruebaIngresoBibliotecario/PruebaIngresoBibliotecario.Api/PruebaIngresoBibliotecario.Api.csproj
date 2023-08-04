@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Bibliotecario.CrossCutting\Bibliotecario.CrossCutting.csproj" />
+    <ProjectReference Include="..\..\Bibliotecation.Business\Bibliotecario.Business.csproj" />
     <ProjectReference Include="..\..\Bibliotecation.DataAccess\Bibliotecario.DataAccess.csproj" />
   </ItemGroup>
 </Project>

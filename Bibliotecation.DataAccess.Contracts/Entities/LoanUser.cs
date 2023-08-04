@@ -17,7 +17,7 @@ public class LoanUser
     public DateTime LoanDate { get; set; }
 
     [Column("BOOK_ID")]
-    public string? BookId { get; set; }
+    public Guid BookId { get; set; }
 
     [Column("DATE_RETURN")]
     public DateTime ReturnDate { get; set; }

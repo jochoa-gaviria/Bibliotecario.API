@@ -22,7 +22,7 @@ namespace Bibliotecario.Common.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MessageResource {
+    public class MessageResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Bibliotecario.Common.Resources {
         ///   Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Bibliotecario.Common.Resources.MessageResource", typeof(MessageResource).Assembly);
@@ -51,7 +51,7 @@ namespace Bibliotecario.Common.Resources {
         ///   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,16 +63,61 @@ namespace Bibliotecario.Common.Resources {
         /// <summary>
         ///   Busca una cadena traducida similar a Modelo Inválido - Errores en el Request.
         /// </summary>
-        internal static string BadRequestMessage {
+        public static string BadRequestMessage {
             get {
                 return ResourceManager.GetString("BadRequestMessage", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a El tipo de usuario es inválido.
+        /// </summary>
+        public static string ErrorInvalidUserType {
+            get {
+                return ResourceManager.GetString("ErrorInvalidUserType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El prestamo con id {0} no existe.
+        /// </summary>
+        public static string ErrorNotFoundLoan {
+            get {
+                return ResourceManager.GetString("ErrorNotFoundLoan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El usuario con identificacion {0} ya tiene un libro prestado por lo cual no se le puede realizar otro prestamo.
+        /// </summary>
+        public static string ErrorUserAlreadyHasLeading {
+            get {
+                return ResourceManager.GetString("ErrorUserAlreadyHasLeading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a El usuario con id {0} no existe.
+        /// </summary>
+        public static string ErrorUserNotFound {
+            get {
+                return ResourceManager.GetString("ErrorUserNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ha ocurrido un error, por favor intente nuevamente.
+        /// </summary>
+        public static string InternalServerError {
+            get {
+                return ResourceManager.GetString("InternalServerError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Operación existosa..
         /// </summary>
-        internal static string SuccessMessage {
+        public static string SuccessMessage {
             get {
                 return ResourceManager.GetString("SuccessMessage", resourceCulture);
             }

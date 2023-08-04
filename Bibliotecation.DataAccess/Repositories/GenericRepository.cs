@@ -70,8 +70,9 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
             await _databaseContext.SaveChangesAsync();
             return entity;
         }
-        catch (Exception)
+        catch (Exception ex)
         {
+
             return null;
         }
     }

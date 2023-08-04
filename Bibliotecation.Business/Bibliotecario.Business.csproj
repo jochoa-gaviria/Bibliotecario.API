@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bibliotecario.Common\Bibliotecario.Common.csproj" />
+    <ProjectReference Include="..\Bibliotecation.DataAccess.Contracts\Bibliotecario.DataAccess.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>
