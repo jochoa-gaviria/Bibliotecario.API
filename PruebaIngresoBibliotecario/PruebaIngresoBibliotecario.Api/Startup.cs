@@ -6,8 +6,9 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
-
-
+using Bibliotecario.DataAccess.Context;
+using Bibliotecario.Common.Extensions;
+using Bibliotecario.CrossCutting.Register;
 
 namespace PruebaIngresoBibliotecario.Api
 {
@@ -26,9 +27,9 @@ namespace PruebaIngresoBibliotecario.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddSwaggerDocument();
+            services.AddSwaggerGen();
 
-            services.AddDbContext<Infrastructure.PersistenceContext>(opt =>
+            services.AddDbContext<PersistenceContext>(opt =>
             {
                 opt.UseInMemoryDatabase("PruebaIngreso");
             });
@@ -36,6 +37,8 @@ namespace PruebaIngresoBibliotecario.Api
             services.AddControllers(mvcOpts =>
             {
             });
+            services.AddModelState();
+            services.AddRegistration();
 
         }
 
@@ -56,8 +59,8 @@ namespace PruebaIngresoBibliotecario.Api
                 endpoints.MapControllers();
             });
 
-            app.UseOpenApi();
-            app.UseSwaggerUi3();
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
         }
     }
