@@ -31,7 +31,7 @@ public static class Register
 
     private static IServiceCollection AddRepositories(this IServiceCollection services)
     {
-        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         return services;
     }
 
