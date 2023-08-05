@@ -35,7 +35,7 @@ public static class Register
         return services;
     }
 
-    private static IServiceCollection AddOther(this IServiceCollection services)
+    private static void AddOther(this IServiceCollection services)
     {
         JsonConvert.DefaultSettings = () => new JsonSerializerSettings
         {
@@ -43,7 +43,6 @@ public static class Register
             NullValueHandling = NullValueHandling.Ignore,
             ReferenceLoopHandling = ReferenceLoopHandling.Ignore
         };
-        return services;
     }
     #endregion private methods
 }

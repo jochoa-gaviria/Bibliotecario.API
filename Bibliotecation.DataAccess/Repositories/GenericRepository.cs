@@ -59,7 +59,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
 
     public async Task<int> Count(Expression<Func<TEntity, bool>> expression)
     {
-        return await _databaseContext.Set<TEntity>().AsNoTracking().CountAsync();
+        return await _databaseContext.Set<TEntity>().AsNoTracking().CountAsync(expression);
     }
 
     public async Task<TEntity?> New(TEntity entity)

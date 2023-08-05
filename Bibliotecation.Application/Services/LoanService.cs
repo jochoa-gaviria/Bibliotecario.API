@@ -61,6 +61,7 @@ public class LoanService : ILoanService
             var loanResult = await _loanRepository.New(createLoanRequestDto.Map(user.Id, returnDate));
 
             response.Data = loanResult.Map();
+
         }
         catch (Exception)
         {

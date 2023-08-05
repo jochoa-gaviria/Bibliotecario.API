@@ -65,7 +65,7 @@ public class UserService : IUserService
             if (!IsModelValid(getUserRequestDto))
                 return null;
             
-            var user = await _userRepository.Get(u => u.Identification.Equals(getUserRequestDto.UserIdentification) && u.TypeUser.Equals(getUserRequestDto.UserType));
+            var user = await _userRepository.Get(u => u.Identification.Equals(getUserRequestDto.UserIdentification) && u.UserType == getUserRequestDto.UserType);
             response = user?.Map();
         }
         catch (Exception)

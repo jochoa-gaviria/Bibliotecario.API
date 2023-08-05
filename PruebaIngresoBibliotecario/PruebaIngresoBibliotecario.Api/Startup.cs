@@ -37,7 +37,7 @@ namespace PruebaIngresoBibliotecario.Api
             services.AddControllers(mvcOpts =>
             {
             });
-            services.AddModelState();
+            //services.AddModelState();
             services.AddRegistration();
 
         }
