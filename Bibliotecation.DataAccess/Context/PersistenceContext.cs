@@ -49,18 +49,18 @@ public class PersistenceContext : DbContext
         {
             new UserType
             {
-                Type = EUserType.AFILIADO,
-                Description = UserTypeConstants.UserTypeDescription[EUserType.AFILIADO]
+                Type = EUserType.Member,
+                Description = UserTypeConstants.UserTypeDescription[EUserType.Member]
             },
             new UserType
             {
-                Type = EUserType.EMPLEADO,
-                Description = UserTypeConstants.UserTypeDescription[EUserType.EMPLEADO]
+                Type = EUserType.Employee,
+                Description = UserTypeConstants.UserTypeDescription[EUserType.Employee]
             },
             new UserType
             {
-                Type = EUserType.INVITADO,
-                Description = UserTypeConstants.UserTypeDescription[EUserType.INVITADO]
+                Type = EUserType.Guest,
+                Description = UserTypeConstants.UserTypeDescription[EUserType.Guest]
             }
         };
     }

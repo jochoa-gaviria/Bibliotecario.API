@@ -10,8 +10,8 @@ public static class UserTypeConstants
     private const string GuestDescription = "Usuario Invitado";
     public static Dictionary<EUserType, string> UserTypeDescription => new()
     {
-        { EUserType.AFILIADO, MemberDescription },
-        { EUserType.EMPLEADO, EmployeeDescription },
-        { EUserType.INVITADO, GuestDescription }
+        { EUserType.Member, MemberDescription },
+        { EUserType.Employee, EmployeeDescription },
+        { EUserType.Guest, GuestDescription }
     };
 }

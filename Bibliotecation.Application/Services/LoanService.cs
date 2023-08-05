@@ -51,7 +51,7 @@ public class LoanService : ILoanService
             }
 
             int loansCountByUser = await _loanRepository.Count(l => l.UserId.Equals(user.Id));
-            if (user.UserType == EUserType.INVITADO && loansCountByUser >= 1)
+            if (user.UserType == EUserType.Guest && loansCountByUser >= 1)
             {
                 response.SetResponse(HttpStatusCode.BadRequest, string.Format(MessageResource.ErrorUserAlreadyHasLeading, user.Identification));
                 return response;
